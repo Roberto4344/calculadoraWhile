@@ -13,10 +13,12 @@ public class CalculadoraUsandoWhile {
 
     public void sumaDeValores(){
         int index = 0;
+        int suma = 0;
         while (index <= 10){
-            System.out.println(index);
-            index++;
+            suma= suma + index;
+            index++;  
         }
+        System.out.println(suma);
     }
 
     public int sumaDeValoresEnElIntervalo(int a, int b){
