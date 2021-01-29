@@ -23,28 +23,36 @@ public class CalculadoraUsandoWhile {
 
     public int sumaDeValoresEnElIntervalo(int a, int b){
         int suma = 0;
-        if (a == b){
-            suma = b; 
+        int resultado = 0;
+        if (a < 0 || b < 0){
+            resultado = -1; 
         }
+        
         else{
-            if(a < 0 || b < 0){
-                suma= -1;
+            if(a == b){
+                resultado = b;
             }
             else{
-                if(a>b){
-                    while (b <= a){                        
+                while (a != b){
+
+                    if(b<=a){
                         suma = suma + b;
                         b++;
                     }
+
+                    else{
+                        suma = suma + a;
+                        a++;       
+                    }                               
+                }
+                if(a>b){
+                    resultado = suma + a;
                 }
                 else{
-                    while (a <= b){
-                        suma = suma + a;
-                        a++;                        
-                    }
+                    resultado = suma + b;
                 }
             }
         }
-        return suma;
+        return resultado;
     }
 }
