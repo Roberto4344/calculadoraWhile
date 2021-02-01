@@ -61,7 +61,7 @@ public class CalculadoraUsandoWhile {
         int resto = 1;
         int div = 2;
         
-        while( resto != 0 && (n-1 > div)){
+        while( resto != 0 && (n > div)){
             resto=n%div;
             div++;
         }
