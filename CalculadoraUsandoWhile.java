@@ -27,7 +27,7 @@ public class CalculadoraUsandoWhile {
         if (a < 0 || b < 0){
             resultado = -1; 
         }
-        
+
         else{
             if(a == b){
                 resultado = b;
@@ -54,5 +54,20 @@ public class CalculadoraUsandoWhile {
             }
         }
         return resultado;
+    }
+
+    public boolean esPrimo(int n){
+        boolean primo = true;
+        int resto = 1;
+        int div = 2;
+        
+        while( resto != 0 && (n-1 > div)){
+            resto=n%div;
+            div++;
+        }
+        if(resto == 0){
+            primo = false;
+        }
+        return primo;
     }
 }
