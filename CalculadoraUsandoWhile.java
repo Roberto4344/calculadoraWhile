@@ -60,13 +60,13 @@ public class CalculadoraUsandoWhile {
         boolean primo = true;
         int resto = 1;
         int div = 2;
-        if ( n < 0){
+        if ( n < 1){
             primo = false;
             System.out.println("##ERROR##");
         }
         else{
             while( resto != 0 && (n > div)){
-                resto=n%div;
+                resto= n % div;
                 div++;
             }
             if(resto == 0){
